@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Invisible To-Do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Inter+Tight:ital,wght@0,400;0,500;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"SpaceHand";src:url(data:font/woff2;base64,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) format("woff2");font-display:block}
+/* VOICE: quiet, honest, a little raw: a riso-printed campaign poster that talks to you like a friend.
+   IDEA: a two-colour risograph print: cobalt image, cherry type, on sand stock with grain.
+   PICTURE: a cobalt halftone landscape with one tiny cherry figure on the ridge, red bars, a field of tiny unsaid words.
+   COLOUR and TYPE: sand ground, cobalt dominant, cherry accent, soft pink support; Inter Tight 900 for titles, marker handwriting for everything said softly.
+   LAYOUT: a hero that fills the first screen on any device, a framed to-do list card, a full cobalt band with two batteries, a sand closing poster. */
+:root{color-scheme:light dark;
+--sand:light-dark(#F3F3E9,#08093a);--paper:light-dark(#fbf6f3,#12146a);
+--ink:light-dark(#0b0c2c,#F3F3E9);--soft:light-dark(#4a4c6e,#c9cbe6);
+--cobalt:#0212EE;--cobalt-t:light-dark(#0212EE,#9aa2ff);
+--cherry:light-dark(#D20001,#ff4a3d);--pink:#FEC6E9;--frame:light-dark(#232323,#000)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--sand);color:var(--ink);font:16px/1.55 "Inter Tight",Helvetica,Arial,sans-serif;overflow-x:clip}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.22;mix-blend-mode:multiply;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+:root[data-theme=dark] body::after{mix-blend-mode:screen;opacity:.08}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) body::after{mix-blend-mode:screen;opacity:.08}}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{font-weight:900;letter-spacing:-.045em;line-height:1.02;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,5.4vw,52px);color:var(--cherry)}
+.hand,.intro .lead,.side p,.blue .sub,.gap p,.verdict,.act p,.date,.th q,.end .big2,.helptop p{font-family:"SpaceHand","Covered By Your Grace",cursive;font-weight:400;letter-spacing:.045em;word-spacing:.08em}
+p{margin:0 0 1em}
+button,input{font:inherit}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:0 22px;border:0;border-radius:0;background:var(--cobalt);color:#F3F3E9;font-weight:800;font-size:17px;cursor:pointer;text-decoration:none;box-shadow:5px 5px 0 var(--cherry);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--cherry)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:5px 5px 0 var(--soft)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px currentColor}
+:focus-visible{outline:3px solid var(--cherry);outline-offset:3px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:var(--sand);border-bottom:2px solid var(--cherry)}
+nav .wrap{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;align-items:center;gap:6px 24px;padding:12px max(5vw,16px)}
+.mark{flex:none;font-weight:900;letter-spacing:-.04em;font-size:19px;color:var(--cherry);text-decoration:none;margin-right:auto}
+nav a.l{flex:none;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:8px 0}
+nav a.l:hover{color:var(--cobalt-t)}
+
+/* hero */
+.hero{position:relative;padding:0;height:calc(100svh - var(--navh,53px));min-height:540px;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.poster{position:relative;overflow:hidden;background:var(--sand)}
+.poster svg{position:absolute;inset:0;width:100%;height:100%}
+.c{fill:var(--cobalt)}.r{fill:var(--cherry)}.p{fill:var(--pink)}.s{fill:#F3F3E9}
+.sky{fill:var(--sand)}
+.w{fill:var(--cherry);font:500 13px "Inter Tight",sans-serif;opacity:.5;text-anchor:middle;paint-order:stroke;stroke:var(--sand);stroke-width:5px;stroke-linejoin:round}
+.w.hl{opacity:1;font-weight:800;font-size:15px}
+.wl{fill:none;stroke:var(--cherry);stroke-width:1.6;stroke-linejoin:round}
+.wd{fill:var(--cherry)}
+.hero h1{position:absolute;left:max(4vw,14px);bottom:clamp(8px,2vw,24px);color:var(--cherry);font-size:min(13.5vw,19svh,210px);line-height:.84;letter-spacing:-.065em;text-transform:uppercase;margin:0}
+.hero h1 span{display:block}
+.hero .band{padding-block:clamp(18px,3svh,40px)}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px clamp(24px,4vw,64px);align-items:end}
+.intro .lead{font-size:clamp(22px,min(2.6vw,4svh),36px);line-height:1.12;max-width:none;width:100%;margin:0;text-wrap:pretty}
+.cta{display:grid;justify-items:end;gap:10px}
+.cta small{font-family:"SpaceHand",cursive;font-size:20px;color:var(--cherry)}
+.intro .lead b{color:var(--cobalt-t);font-weight:400}
+
+/* illustrations */
+.ill{display:block;width:100%;height:auto;overflow:visible}
+.ill .scrib,.deco .scrib{fill:none;stroke:var(--cherry);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.dc{fill:var(--cobalt)}.dp{fill:var(--pink)}.ds{fill:#F3F3E9}.dr{fill:var(--cherry)}.dk{fill:var(--ink)}
+.side .ill{max-width:380px;margin-top:clamp(20px,3vw,40px)}
+.blue{position:relative;overflow:hidden}
+.blue .deco{position:absolute;right:-60px;top:-110px;width:min(38vw,460px);pointer-events:none}
+.blue .wrap{position:relative}
+.endtop{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.endtop .ill{max-width:440px;justify-self:end}
+.helptop{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.helptop .ill{max-width:420px;justify-self:end}
+/* list */
+.list-sec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(24px,5vw,72px);align-items:start}
+.list-sec .side p{color:var(--soft);max-width:none;text-wrap:pretty;font-size:clamp(22px,2.2vw,26px);line-height:1.2}
+.frame{background:var(--frame);padding:clamp(14px,2.4vw,26px);box-shadow:0 18px 40px -18px rgba(0,0,0,.5)}
+.card{position:relative;background:var(--paper);padding:clamp(20px,3vw,36px);overflow:hidden}
+.card::before,.card::after{content:"";position:absolute;background:var(--cherry);height:14px;width:150px;right:-30px;transform:rotate(-38deg)}
+.card::before{top:26px}.card::after{top:54px;width:90px;right:-10px}
+.card h3{font-size:clamp(30px,4vw,44px);color:var(--cobalt-t);letter-spacing:-.05em}
+.date{color:var(--cherry);font-size:21px;margin:4px 0 18px}
+ul.todo{list-style:none;margin:0;padding:0}
+.todo li{border-top:1.5px solid color-mix(in srgb,var(--cobalt-t) 35%,transparent);padding:4px 0}
+.todo label{display:flex;align-items:center;gap:14px;min-height:52px;cursor:pointer;font-weight:800;font-size:clamp(18px,2vw,21px);letter-spacing:-.02em}
+.todo input{position:absolute;opacity:0;width:1px;height:1px}
+.box{flex:none;width:28px;height:28px;border:2.5px solid var(--cobalt-t);position:relative;background:transparent}
+.box::before,.box::after{content:"";position:absolute;left:50%;top:50%;width:34px;height:4px;background:var(--cherry);transform:translate(-50%,-50%) rotate(45deg) scaleX(0);transition:transform .18s}
+.box::after{transform:translate(-50%,-50%) rotate(-45deg) scaleX(0)}
+.todo input:checked+.box::before{transform:translate(-50%,-50%) rotate(45deg) scaleX(1)}
+.todo input:checked+.box::after{transform:translate(-50%,-50%) rotate(-45deg) scaleX(1);transition-delay:.1s}
+.todo input:focus-visible+.box{outline:3px solid var(--cherry);outline-offset:3px}
+.todo .del{margin-left:auto;border:0;background:none;color:var(--soft);cursor:pointer;width:44px;height:44px;font-size:22px}
+.th{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.th>div{overflow:hidden}
+li.on .th{grid-template-rows:1fr}
+.th q{display:block;quotes:none;margin:2px 0 14px 42px;padding:4px 12px 2px;background:var(--pink);color:#0212EE;font-size:23px;line-height:1.2;width:fit-content;max-width:100%;transform-origin:0 0;transform:rotate(-1.2deg)}
+li.on .th q{animation:surface .75s cubic-bezier(.2,.9,.3,1.3) both}
+@keyframes surface{0%{opacity:0;filter:blur(7px);transform:translateY(-16px) rotate(-6deg) scale(.92)}55%{opacity:1;filter:blur(0)}75%{transform:translateY(2px) rotate(1deg) scale(1.02)}100%{transform:rotate(-1.2deg)}}
+.todo .tt{position:relative;width:fit-content}
+.todo .tt::after{content:"";position:absolute;left:-4px;right:-4px;top:54%;height:3px;background:var(--cherry);transform:scaleX(0);transform-origin:0 50%;transition:transform .35s ease .1s}
+li.on .tt::after{transform:scaleX(1)}
+li.on .tt{color:var(--soft)}
+.add{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;margin-top:14px;padding-top:14px;border-top:1.5px dashed color-mix(in srgb,var(--cobalt-t) 45%,transparent)}
+.add input{min-height:46px;font-size:16px;padding:0 12px;border:2px solid var(--cobalt-t);background:transparent;color:var(--ink);border-radius:0}
+.add input::placeholder{color:var(--soft)}
+.add button{min-height:46px;padding:0 16px;border:0;background:var(--cherry);color:#fff;font-weight:800;cursor:pointer}
+.tally{display:flex;flex-wrap:wrap;gap:8px 24px;margin:22px 0 18px;font-weight:700}
+.tally span{color:var(--cherry)}.tally span+span{color:var(--cobalt-t)}
+
+/* battery */
+.blue{background:var(--cobalt);color:#F3F3E9}
+.blue h2{color:#F3F3E9}
+.blue .sub{max-width:none;text-wrap:pretty;font-size:clamp(22px,2.4vw,27px);line-height:1.2;opacity:.95}
+.bats{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr) minmax(0,1fr);align-items:end;gap:clamp(12px,3vw,40px);margin:clamp(28px,4vw,48px) 0}
+.bat{display:grid;justify-items:center;gap:12px;text-align:center}
+.cell{position:relative;width:min(150px,100%);aspect-ratio:1/1.9;border:5px solid #F3F3E9;padding:7px}
+.cell::before{content:"";position:absolute;left:50%;top:-17px;width:40%;height:12px;background:#F3F3E9;transform:translateX(-50%)}
+.fill{position:absolute;left:7px;right:7px;bottom:7px;height:calc((100% - 14px)*var(--v)/100);background:var(--pink);transition:height .4s ease,background .3s}
+.fill.real{background:repeating-linear-gradient(0deg,#F3F3E9 0 3px,transparent 3px 6px),#F3F3E9}
+.fill.low{background:#D20001}
+.pct{font-size:clamp(40px,6vw,72px);font-weight:900;letter-spacing:-.06em;line-height:.9;font-variant-numeric:tabular-nums}
+.bat small{font-weight:700;font-size:15px}
+.gap{align-self:center;text-align:center;display:grid;gap:8px;justify-items:center}
+.gap .tag{background:var(--pink);color:#D20001;font-weight:900;letter-spacing:-.03em;padding:8px 12px;font-size:clamp(18px,2.4vw,26px);line-height:1.05}
+.gap .rule{width:100%;height:0;border-top:3px dashed var(--pink)}
+.gap p{margin:0;font-size:20px;opacity:.9}
+.log{list-style:none;margin:0;padding:0;columns:2 320px;column-gap:40px}
+.log li{break-inside:avoid;display:grid;grid-template-columns:4.2em minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px solid rgba(243,243,233,.25);animation:in .35s both}
+.log b{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.log li.i{color:var(--pink);font-style:italic}
+.log .empty{display:block;border:0;font-style:normal;opacity:.85}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+.verdict{font-size:clamp(28px,3.4vw,40px);line-height:1.12;max-width:none;text-wrap:pretty;margin:28px 0 22px;min-height:1.2em;color:var(--pink)}
+.blue .btn{background:#F3F3E9;color:#0212EE;box-shadow:5px 5px 0 #D20001}
+.blue .btn:disabled{box-shadow:5px 5px 0 rgba(243,243,233,.4)}
+
+/* end */
+.end{position:relative;overflow:hidden}
+.end .big{font-size:clamp(40px,7vw,96px);font-weight:900;letter-spacing:-.06em;line-height:.92;color:var(--cherry);max-width:14ch;margin:0 0 20px}
+.end .big2{font-size:clamp(32px,4.4vw,56px);line-height:1.05;color:var(--cobalt-t);max-width:none;text-wrap:pretty;margin:0 0 clamp(36px,5vw,64px)}
+.more{text-align:center;font-size:clamp(28px,4vw,48px);color:var(--ink);max-width:20ch;margin:clamp(40px,6vw,80px) auto clamp(32px,4vw,56px)}
+.more em{font-style:normal;color:var(--cherry)}
+.acts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr) minmax(0,1fr);gap:clamp(18px,3vw,44px);align-items:center;max-width:1120px;margin:0 auto}
+.act{position:relative;padding:30px 26px 26px;box-shadow:0 14px 30px -16px rgba(0,0,0,.45)}
+.act h3{font-size:clamp(26px,2.6vw,32px);margin-bottom:12px;letter-spacing:-.045em;line-height:1}
+.act p{font-size:22px;line-height:1.18}
+.act::before{content:"";position:absolute;top:-12px;left:50%;width:96px;height:26px;background:color-mix(in srgb,var(--pink) 80%,transparent);transform:translateX(-50%) rotate(-4deg)}
+.slip-a{background:var(--paper);transform:rotate(-2.4deg);margin-top:-40px}
+.slip-a h3{color:var(--cherry)}.slip-a p{color:var(--ink)}
+.slip-c{background:#0212EE;transform:rotate(2deg);margin-top:80px}
+.slip-c h3{color:var(--pink)}.slip-c p{color:#F3F3E9}
+.slip-c::before{background:color-mix(in srgb,#F3F3E9 75%,transparent)}
+.phone{background:#111;border-radius:38px;padding:12px;box-shadow:0 24px 44px -18px rgba(0,0,0,.55),10px 10px 0 var(--cherry);max-width:340px;justify-self:center;width:100%}
+.screen{background:#F3F3E9;color:#0b0c2c;border-radius:28px;padding:16px 16px 20px;min-height:430px;display:flex;flex-direction:column}
+.notch{width:90px;height:20px;background:#111;border-radius:0 0 14px 14px;margin:-16px auto 14px}
+.chat-h{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid #d9d9cc;margin-bottom:auto}
+.av{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle,#0212EE 1.6px,transparent 1.9px) 0 0/6px 6px,#FEC6E9;flex:none}
+.chat-h b{font-size:15px;font-weight:800;line-height:1.1}.chat-h small{display:block;font-size:13px;color:#4a4c6e;font-weight:500}
+.in{align-self:flex-start;background:#e3e3d6;padding:9px 13px;border-radius:18px 18px 18px 4px;font-size:15px;margin:18px 0 8px;max-width:80%}
+.phone h3{font-size:24px;color:#D20001;letter-spacing:-.04em;margin:14px 0 8px}
+#msg{align-self:flex-end;margin:0 0 6px;padding:11px 14px;background:#0212EE;color:#F3F3E9;border-radius:18px 18px 4px 18px;font-weight:600;font-size:15px;line-height:1.4;max-width:88%}
+.sent{align-self:flex-end;font-family:"SpaceHand",cursive;font-size:18px;color:#D20001;margin-bottom:14px}
+.copy{min-height:44px;padding:0 16px;border:0;border-radius:22px;background:#FEC6E9;color:#0212EE;font-weight:800;cursor:pointer;font-size:15px}
+.again{text-align:center;margin-top:clamp(40px,5vw,64px)}
+.help{background:var(--cherry);color:#F3F3E9}
+.help h2{color:#F3F3E9}
+.help .helptop p,.help>.wrap>p{font-size:clamp(23px,2.6vw,30px);line-height:1.15;max-width:none;text-wrap:pretty;margin:14px 0 clamp(24px,3vw,40px)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(12px,1.6vw,20px)}
+.links a{display:grid;gap:6px;align-content:start;background:#F3F3E9;color:#0b0c2c;text-decoration:none;padding:20px 20px 18px;box-shadow:6px 6px 0 #0212EE;transition:transform .15s,box-shadow .15s}
+.links a:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 #0212EE}
+.links b{font-size:22px;font-weight:900;letter-spacing:-.035em;color:#0212EE}
+.links .n{font-size:28px;font-weight:900;letter-spacing:-.04em;color:#D20001;white-space:nowrap;line-height:1.1}
+.help .links p{font-family:"Inter Tight",Helvetica,Arial,sans-serif;margin:0;font-size:15px;line-height:1.45;color:#4a4c6e}
+.links .go{font-weight:800;font-size:14px;color:#0b0c2c}
+.help .wrap>p.note{font-family:"Inter Tight",Helvetica,Arial,sans-serif;font-size:clamp(16px,1.7vw,20px);font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-top:32px;max-width:none;line-height:1.25}
+footer{border-top:2px solid var(--cherry);color:var(--soft);font-size:14px}
+footer .wrap{text-align:center}
+footer b{color:var(--cherry);font-weight:900;letter-spacing:-.03em;font-size:17px}
+.tag-line{display:block;font-weight:900;letter-spacing:-.02em;color:var(--cobalt-t);font-size:clamp(16px,2vw,24px);text-wrap:balance}
+
+@media(max-width:860px){.endtop,.helptop{grid-template-columns:minmax(0,1fr)}.list-sec,.intro{grid-template-columns:minmax(0,1fr)}.acts{grid-template-columns:minmax(0,1fr);max-width:460px}.slip-a,.slip-c{margin-top:0}.phone{order:-1}}
+@media(max-width:600px){
+ nav a.l{font-size:14px}
+ .bats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.gap{grid-column:1/-1;order:3}
+ .add{grid-template-columns:minmax(0,1fr)}
+ .th q{margin-left:0}
+ .blue .deco{width:70vw;right:-60px;top:-50px;opacity:.55}
+ .endtop .ill,.helptop .ill{justify-self:center;max-width:300px}
+ .cta{justify-items:start}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+ <pattern id="hC" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="2.5" class="dc"/></pattern>
+ <pattern id="hC2" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3.5" cy="3.5" r="1.4" class="dc"/></pattern>
+ <pattern id="hP" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><circle cx="3.5" cy="3.5" r="2.6" class="dp"/></pattern>
+ <pattern id="hS" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="2.4" class="ds"/></pattern>
+ <pattern id="hR" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3" cy="3" r="1.8" class="dr"/></pattern>
+ <linearGradient id="fadeG" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <mask id="fadeM" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#fadeG)"/></mask>
+ <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+ <symbol id="head" viewBox="0 0 320 360"><path d="M80 360L80 292C40 262 28 204 38 152C52 72 118 30 180 34C246 38 282 90 284 140C285 166 282 176 294 200C300 212 292 217 282 219C284 233 280 239 274 243C278 251 274 259 268 263C270 286 256 296 232 293C212 291 202 293 200 312L200 360Z"/></symbol>
+</defs></svg>
+<nav><div class="wrap">
+ <a class="mark" href="#top">The Space Between</a>
+ <a class="l" href="#day">Your day</a>
+ <a class="l" href="#battery">Social battery</a>
+ <a class="l" href="#message">The message</a>
+ <a class="l" href="#help">Get help</a>
+</div></nav>
+
+<header class="hero" id="top">
+ <div class="poster" aria-hidden="true">
+  <svg id="art" viewBox="0 0 800 560" preserveAspectRatio="xMidYMax slice" overflow="visible">
+   <defs>
+    <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="2.4" class="c"/></pattern>
+    <pattern id="dotsS" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.3" class="c"/></pattern>
+    <pattern id="lite" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" class="s"/></pattern>
+    <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset=".15" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <mask id="fade" maskUnits="userSpaceOnUse" x="-900" y="0" width="2600" height="360"><rect x="-900" width="2600" height="360" fill="url(#fg)"/></mask>
+   </defs>
+   <rect x="-900" width="2600" height="560" class="sky"/>
+   <rect x="-900" width="2600" height="360" fill="url(#dotsS)" mask="url(#fade)"/>
+   <g id="words"></g>
+   <circle cx="575" cy="215" r="115" class="p"/>
+   <g class="r" transform="rotate(-36 640 120)"><rect x="560" y="96" width="190" height="16"/><rect x="600" y="132" width="120" height="16"/></g>
+   <path d="M-900 300L-760 250L-600 310L-440 236L-280 300L-130 258L0 330L90 268L170 300L262 206L342 280L432 230L522 292L612 220L702 262L800 228L930 284L1070 214L1220 292L1380 240L1700 300V560H-900Z" fill="url(#dots)"/>
+   <path d="M-900 382L-720 320L-540 392L-360 330L-180 372L0 404L118 330L210 382L330 296L420 362L522 318L642 392L800 342L960 384L1130 318L1310 392L1700 350V560H-900Z" class="c"/>
+   <path d="M330 296L420 362L384 378L344 330L300 336Z M522 318L642 392L590 398L540 352Z M118 330L210 382L170 392L132 352Z" fill="url(#lite)" opacity=".75"/>
+   <rect x="-900" y="462" width="2600" height="98" class="c"/>
+   <g class="s" opacity=".85"><rect x="60" y="480" width="180" height="3"/><rect x="300" y="492" width="120" height="2"/><rect x="470" y="478" width="230" height="3"/><rect x="140" y="510" width="90" height="2"/><rect x="560" y="520" width="150" height="2"/><rect x="380" y="532" width="70" height="2"/></g>
+   <circle cx="330" cy="272" r="6.5" class="r"/><rect x="324" y="280" width="12" height="17" rx="4" class="r"/>
+   <g class="r"><rect x="690" y="404" width="64" height="42"/><rect x="690" y="452" width="64" height="20"/><rect x="690" y="478" width="64" height="12"/></g>
+  </svg>
+  <h1><span>The space</span><span>between</span></h1>
+ </div>
+ <div class="band"><div class="wrap"><div class="intro">
+   <p class="lead">A to-do list shows what you did. It doesn't show what it took. <b>The Invisible To-Do List</b> puts the thoughts nobody sees next to your day, and works out how much energy it really took.</p>
+   <div class="cta"><a class="btn" href="#day">Start your day →</a><small>takes about two minutes</small></div>
+ </div></div></div>
+</header>
+
+<section class="band" id="day"><div class="wrap list-sec">
+ <div class="side">
+  <h2>Plan an ordinary day.</h2>
+  <p style="margin-top:18px">Tick what you've got on today. Each thing you tick shows the thought that comes with it, the part no one else sees.</p>
+  <p>Got something that isn't here? Add it, and the thought that comes with it.</p>
+  <svg class="ill" viewBox="0 0 420 400" aria-hidden="true"><g filter="url(#rough)">
+   <circle cx="300" cy="118" r="96" fill="url(#hP)"/>
+   <use href="#head" x="30" y="40" width="320" height="360" fill="url(#hC)" mask="url(#fadeM)"/>
+   <g class="dr" transform="rotate(-32 330 300)"><rect x="250" y="290" width="160" height="13"/><rect x="290" y="318" width="90" height="13"/></g>
+   <path class="scrib" data-scrib="190,170,78,62,46,7"/>
+  </g></svg>
+ </div>
+ <div class="frame"><div class="card">
+  <h3>To do</h3>
+  <div class="date" id="date">Today</div>
+  <ul class="todo" id="todo"></ul>
+  <form class="add" id="add" autocomplete="off">
+   <input id="addT" maxlength="40" placeholder="Something else on your list" aria-label="Task">
+   <input id="addQ" maxlength="70" placeholder="What it makes you think (optional)" aria-label="The thought behind it">
+   <button type="submit">Add</button>
+  </form>
+  <div class="tally" aria-live="polite"><span id="tv">0 things on your list</span><span id="ti">0 thoughts nobody sees</span></div>
+  <button class="btn" id="go" disabled>See what it cost →</button>
+ </div></div>
+</div></section>
+
+<section class="band blue" id="battery">
+ <svg class="deco" viewBox="0 0 520 420" aria-hidden="true"><g filter="url(#rough)">
+  <circle cx="300" cy="190" r="170" fill="url(#hP)" opacity=".9"/>
+  <circle cx="300" cy="190" r="110" fill="url(#hS)" opacity=".35"/>
+  <g class="dr" transform="rotate(-36 300 190)"><rect x="150" y="150" width="330" height="18"/><rect x="200" y="190" width="200" height="18"/></g>
+  <path class="scrib" style="stroke:#F3F3E9;stroke-width:1.4" d="M40 360C120 300 170 390 230 330S330 380 380 320 470 360 500 300"/>
+ </g></svg>
+ <div class="wrap">
+ <h2>Your social battery</h2>
+ <p class="sub" style="margin-top:14px">The battery on the left drains for the tasks people can see. The one on the right also drains for the thoughts behind them.</p>
+ <div class="bats">
+  <div class="bat"><div class="pct" id="pS">100%</div><div class="cell"><div class="fill" id="fS" style="--v:100"></div></div><small>What people see</small></div>
+  <div class="gap"><div class="tag" id="gapT">The space between</div><div class="rule"></div><p id="gapP">Plan your day to measure it</p></div>
+  <div class="bat"><div class="pct" id="pR">100%</div><div class="cell"><div class="fill real" id="fR" style="--v:100"></div></div><small>What it actually took</small></div>
+ </div>
+ <p class="verdict" id="verdict" aria-live="polite"></p>
+ <ul class="log" id="log"><li class="empty">Nothing on your list yet. Tick a few things above, then run your day.</li></ul>
+ <p style="margin-top:28px"><button class="btn" id="run" disabled>Run my day</button></p>
+</div></section>
+
+<section class="band end" id="message"><div class="wrap">
+ <div class="endtop"><div>
+ <p class="big">Your day might look simple to someone else.</p>
+ <p class="big2">But you know how much it took to get through it.</p>
+ </div>
+ <svg class="ill" viewBox="0 0 440 420" aria-hidden="true"><g filter="url(#rough)">
+  <circle cx="250" cy="170" r="150" fill="url(#hP)"/>
+  <g transform="rotate(-14 210 240)">
+   <rect x="70" y="150" width="280" height="150" rx="6" fill="url(#hC2)"/>
+   <rect x="70" y="150" width="280" height="150" rx="6" fill="none" class="" style="stroke:var(--cobalt);stroke-width:14"/>
+   <rect x="350" y="195" width="26" height="60" class="dc"/>
+   <rect x="92" y="172" width="54" height="106" class="dr"/>
+  </g>
+  <g class="dr"><rect x="20" y="330" width="70" height="44"/><rect x="20" y="380" width="70" height="20"/><rect x="20" y="404" width="70" height="12"/></g>
+  <path class="scrib" d="M300 60c20-30 50-10 40 10s-40 10-20-20 60-30 70 0"/>
+ </g></svg>
+ </div>
+ <h2 class="more">There's more happening <em>between</em> what you do and what you feel.</h2>
+ <div class="acts">
+  <div class="act slip-a"><h3>Take the break</h3><p>Skipping one plan to recharge isn't laziness, it's maintenance. You don't need to earn rest by being exhausted first.</p><p style="margin:0">Pick one thing off today's list that can wait, and let it wait.</p></div>
+  <div class="phone"><div class="screen">
+   <div class="notch"></div>
+   <div class="chat-h"><span class="av"></span><div><b>The group chat</b><small>5 unread</small></div></div>
+   <div class="in">you coming tonight??</div>
+   <h3>Say it out loud</h3>
+   <p id="msg">Not ignoring you. My battery's just really low today. I'll reply when I've got a bit more in me.</p>
+   <span class="sent">sent, no guilt</span>
+   <button class="copy" id="copy">Copy message</button>
+  </div></div>
+  <div class="act slip-c"><h3>Check in on someone</h3><p>A friend who's gone quiet isn't lazy or uninterested. Their battery might just be empty.</p><p style="margin:0">Ask how they're doing, and don't take the slow reply personally.</p></div>
+ </div>
+ <p class="again"><button class="btn ghost" id="reset">Plan another day</button></p>
+</div></section>
+
+<section class="band help" id="help"><div class="wrap">
+ <div class="helptop"><div>
+ <h2>Reach for help</h2>
+ <p>If it's been feeling heavy for a while, you don't have to carry it alone. These lines are free and confidential.</p>
+ </div>
+ <svg class="ill" viewBox="0 0 460 300" aria-hidden="true"><g filter="url(#rough)">
+  <circle cx="230" cy="120" r="52" fill="url(#hP)"/>
+  <use href="#head" x="0" y="20" width="230" height="260" fill="url(#hS)" mask="url(#fadeM)"/>
+  <use href="#head" x="-460" y="20" width="230" height="260" transform="scale(-1 1)" fill="url(#hC)" mask="url(#fadeM)"/>
+  <path class="scrib" style="stroke:#0212EE" data-scrib="120,140,44,36,22,3"/>
+  <path class="scrib" style="stroke:#F3F3E9;stroke-width:1.6" data-scrib="340,140,30,24,10,9"/>
+ </g></svg>
+ </div>
+ <div class="links">
+  <a href="https://telemanas.mohfw.gov.in/home" target="_blank" rel="noopener"><b>Tele-MANAS</b><span class="n">14416</span><p>India's national mental health helpline. Free, 24/7, in 20+ languages. Also <span style="white-space:nowrap">1-800-891-4416</span>.</p><span class="go">telemanas.mohfw.gov.in ↗</span></a>
+  <a href="https://icallhelpline.org/" target="_blank" rel="noopener"><b>iCALL (TISS)</b><span class="n">9152987821</span><p>Counselling by trained professionals over phone, email and chat. Mon–Sat, 8 am–10 pm.</p><span class="go">icallhelpline.org ↗</span></a>
+  <a href="https://www.vandrevalafoundation.com/" target="_blank" rel="noopener"><b>Vandrevala Foundation</b><span class="n">+91 9999 666 555</span><p>Free crisis counselling, 24/7. Call or WhatsApp.</p><span class="go">vandrevalafoundation.com ↗</span></a>
+  <a href="https://findahelpline.com/" target="_blank" rel="noopener"><b>Find A Helpline</b><span class="n">Worldwide</span><p>Not in India? Find a free, confidential line near you.</p><span class="go">findahelpline.com ↗</span></a>
+ </div>
+ <p class="note">In immediate danger? Call 112, India's emergency number.</p>
+</div></section>
+
+<footer class="band"><div class="wrap">
+ <span class="tag-line">BETWEEN EVERYTHING YOU HAVE TO DO AND EVERYTHING YOU FEEL</span>
+</div></footer>
+
+<script>
+{
+const T=[
+ {t:'Attend college',q:'Am I falling behind everyone?',v:6,i:10},
+ {t:'Complete assignments',q:"What if I don't finish on time?",v:7,i:9},
+ {t:'Study for exams',q:'What if I disappoint everyone?',v:8,i:12},
+ {t:'Meet friends',q:"I don't have the energy to socialise.",v:4,i:11},
+ {t:'Apply for internships',q:"What if I don't have a successful career?",v:5,i:13},
+ {t:'Attend social events',q:'I have to look okay all night.',v:5,i:10},
+ {t:'Reply to messages',q:"I don't have the energy to talk right now.",v:2,i:8}
+].map((x,n)=>({...x,id:'t'+n,on:false}));
+let custom=0;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+for(const p of document.querySelectorAll('[data-scrib]')){
+ const [cx,cy,rx,ry,n,seed]=p.dataset.scrib.split(',').map(Number);let a=seed*9301+49297;
+ const rnd=()=>(a=(a*9301+49297)%233280)/233280;
+ const pts=[];for(let i=0;i<n;i++){const t=rnd()*6.283,k=Math.sqrt(rnd());pts.push([cx+Math.cos(t)*rx*k,cy+Math.sin(t)*ry*k])}
+ let d=`M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+ for(let i=1;i<pts.length-2;i++){const p0=pts[i-1],p1=pts[i],p2=pts[i+1],p3=pts[i+2];
+  d+=`C${(p1[0]+(p2[0]-p0[0])/6).toFixed(1)} ${(p1[1]+(p2[1]-p0[1])/6).toFixed(1)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(1)} ${(p2[1]-(p3[1]-p1[1])/6).toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`}
+ p.setAttribute('d',d);
+}
+const nav=document.querySelector('nav');const setNav=()=>document.documentElement.style.setProperty('--navh',nav.offsetHeight+'px');setNav();new ResizeObserver(setNav).observe(nav);
+$('date').textContent=new Date().toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long'})+'. An ordinary day.';
+
+const words=['fine','later','tired','sorry','busy','ok','soon','almost','maybe','no','again','why me','behind','enough?','just tired'];
+const rowsY=[46,86,126,166],colX=[];for(let x=-900;x<=1700;x+=120)colX.push(x);
+const path=[[0,2],[1,0],[2,3],[3,1],[4,1],[5,0],[6,1]].map(([c,r])=>[60+c*120,r]);
+const onLine=new Set(path.map(([x,r])=>x+','+r));
+const lineWords=['tired','why me','behind','enough?','almost','sorry','just tired'];
+let g='',pts=[];
+colX.forEach((x,ci)=>rowsY.forEach((y,ri)=>{
+ const key=x+','+ri,hit=onLine.has(key);
+ const w=hit?lineWords[path.findIndex(p=>p[0]===x)]:words[(ci*4+ri*7)%words.length];
+ g+=`<text class="w${hit?' hl':''}" x="${x}" y="${y}">${w}</text>`;
+ if(hit)pts.push([x,y+9]);
+}));
+pts.sort((a,b)=>a[0]-b[0]);
+g=`<polyline class="wl" points="${pts.map(p=>p.join(',')).join(' ')}"/>`+pts.map(p=>`<circle class="wd" cx="${p[0]}" cy="${p[1]}" r="3"/>`).join('')+g;
+$('words').innerHTML=g;
+const art=$('art');const fit=()=>{const b=art.getBoundingClientRect();art.setAttribute('preserveAspectRatio',b.width/b.height>800/560?'xMidYMax meet':'xMidYMax slice')};fit();new ResizeObserver(fit).observe(art);
+
+function render(){
+ $('todo').innerHTML=T.map(x=>`<li class="${x.on?'on':''}" data-id="${x.id}"><label><input type="checkbox" ${x.on?'checked':''}><span class="box"></span><span class="tt">${esc(x.t)}</span>${x.c?`<button type="button" class="del" aria-label="Remove ${esc(x.t)}">×</button>`:''}</label><div class="th"><div><q>${esc(x.q)}</q></div></div></li>`).join('');
+ tally();
+}
+function tally(){
+ const n=T.filter(x=>x.on).length;
+ $('tv').textContent=`${n} ${n===1?'thing':'things'} on your list`;
+ $('ti').textContent=`${n} ${n===1?'thought':'thoughts'} nobody sees`;
+ $('go').disabled=$('run').disabled=!n;
+ if(!n&&!running){$('log').innerHTML='<li class="empty">Nothing on your list yet. Tick a few things above, then run your day.</li>'}
+}
+$('todo').addEventListener('change',e=>{
+ const li=e.target.closest('li');const x=T.find(t=>t.id===li.dataset.id);
+ x.on=e.target.checked;li.classList.toggle('on',x.on);tally();
+});
+$('todo').addEventListener('click',e=>{
+ if(!e.target.classList.contains('del'))return;
+ e.preventDefault();const id=e.target.closest('li').dataset.id;
+ T.splice(T.findIndex(t=>t.id===id),1);render();
+});
+$('add').addEventListener('submit',e=>{
+ e.preventDefault();const t=$('addT').value.trim();if(!t)return;
+ const q=$('addQ').value.trim()||'Nobody knows how heavy this one is.';
+ T.push({t,q,v:5,i:9,id:'c'+(custom++),on:true,c:true});
+ $('addT').value=$('addQ').value='';render();
+});
+
+let running=false,timer=null;
+function setBat(seen,real){
+ $('fS').style.setProperty('--v',seen);$('fR').style.setProperty('--v',real);
+ $('pS').textContent=seen+'%';$('pR').textContent=real+'%';
+ $('fR').classList.toggle('low',real<=20);
+}
+function run(){
+ const sel=T.filter(x=>x.on);if(!sel.length)return;
+ clearTimeout(timer);running=true;$('run').disabled=true;
+ let seen=100,real=100;setBat(100,100);$('log').innerHTML='';$('verdict').textContent='';
+ $('gapT').textContent='The space between';$('gapP').textContent='Measuring…';
+ const steps=sel.flatMap(x=>[{k:'v',l:x.t,a:x.v},{k:'i',l:x.q,a:x.i}]);
+ let n=0;
+ const step=()=>{
+  const s=steps[n++];
+  if(s.k==='v')seen=Math.max(3,seen-s.a);
+  real=Math.max(2,real-s.a);
+  setBat(seen,real);
+  const li=document.createElement('li');li.className=s.k;
+  const b=document.createElement('b');b.textContent='−'+s.a+'%';
+  const sp=document.createElement('span');sp.textContent=s.l;
+  li.append(b,sp);$('log').append(li);
+  if(n<steps.length){timer=setTimeout(step,reduce?0:420)}else finish(seen,real);
+ };
+ if(reduce){while(n<steps.length-1){const s=steps[n++];if(s.k==='v')seen=Math.max(3,seen-s.a);real=Math.max(2,real-s.a);const li=document.createElement('li');li.className=s.k;li.innerHTML=`<b>−${s.a}%</b><span>${esc(s.l)}</span>`;$('log').append(li)}}
+ step();
+}
+function finish(seen,real){
+ running=false;$('run').disabled=false;
+ const gap=seen-real;
+ $('gapT').textContent=gap+'% unseen';
+ $('gapP').textContent='The space between';
+ $('verdict').textContent=real<=10
+  ?`People see someone at ${seen}%. You're running on ${real}%. That's not lazy. That's empty.`
+  :`People see someone at ${seen}%. You're at ${real}%. ${gap}% of your day happened where no one could see it.`;
+}
+$('go').addEventListener('click',()=>{$('battery').scrollIntoView({behavior:reduce?'auto':'smooth'});setTimeout(run,reduce?0:600)});
+$('run').addEventListener('click',run);
+$('reset').addEventListener('click',()=>{clearTimeout(timer);running=false;T.forEach(x=>x.on=false);render();setBat(100,100);$('verdict').textContent='';$('gapT').textContent='The space between';$('gapP').textContent='Plan your day to measure it';$('day').scrollIntoView({behavior:reduce?'auto':'smooth'})});
+$('copy').addEventListener('click',async()=>{
+ try{await navigator.clipboard.writeText($('msg').textContent);$('copy').textContent='Copied'}
+ catch(e){$('copy').textContent='Select the text to copy'}
+ setTimeout(()=>$('copy').textContent='Copy message',2000);
+});
+render();
+}
+</script>
+</body>
+</html>
